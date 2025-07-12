@@ -1,0 +1,8 @@
+body {
+  font-family: Roboto, sans-serif;
+  color: hsl(213, 91.6%, 28%);
+  background: #fffff8;
+}
+button {
+  padding: 0.5rem 1rem;
+}
