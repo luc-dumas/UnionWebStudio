@@ -3,16 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Union Web Design</title>
+    <title>Union Web Studio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/svgs/Tree-1--Streamline-Plump.svg">
+    <link rel="stylesheet" href="animations/magic-master/dist/magic.css">
+
+
 </head>
 
 <body>
     <div class="header">
         <div class="logo-and-title">
-            <img src="assets/svgs/Tree-1--Streamline-Plump.svg" alt="Union Web Design Logo" width="75" height="75">
+            <img src="assets/svgs/Tree-1--Streamline-Plump.svg" alt="Union Web Design Logo" width="90" height="90">
             <div class="title-block">
-                <h1>Union Web Design</h1>
+                <p class="big-title">Union Web Studio</p>
                 <div class="sub-title fade-in">
                     We build thoughtful software. Tools, sites, and systems for real people.
                 </div>
@@ -20,19 +28,21 @@
         </div>
         <div class="nav">
             <ul>
-                <li><a href="#services"><img src="assets/icons/icon1.png" class="nav-icon"
-                            alt="Services icon">Services</a>
+                <li><a href="#services">Services</a>
                 </li>
-                <span class="nav-divider"></span>
-                <li><a href="#contact"><img src="assets/icons/icon2.png" class="nav-icon" alt="Contact icon">Contact</a>
+                <!-- <span class="nav-divider"></span> -->
+                <li><a href="#contact">Testimonials</a>
                 </li>
-                <span class="nav-divider"></span>
-                <li><a href="#about"><img src="assets/icons/icon3.png" class="nav-icon" alt="About icon">About</a>
+                <!-- <span class="nav-divider"></span> -->
+                <li><a href="#about">Experience</a>
+                </li>
+                <!-- <span class="nav-divider"></span> -->
+                <li><a href="#about">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
-    <hr class="header-divider">
+    <!-- <hr class="header-divider"> -->
     <!-- <div class="hero">
         <div class="hero-blurb no-box">
             <img src="assets/images/designs.jpg" alt="What we do" class="hero-image">
@@ -45,32 +55,62 @@
     </div> -->
     <div class="hero-flex-wrapper">
         <div class="hero-flex">
-            <div class="hero-flex__text">
-                <h2>Responsive&nbsp;Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="hero-flex__text" style="align-items: flex-start; text-align: left; width: 100%;">
+                <p style="font-weight: bold; font-size: 30px; margin-left: 0;">Responsive&nbsp;Design</p>
+                <p style="font-size: 1.2rem; margin-left: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor.</p>
                 <a href="#" class="btn">More info</a>
             </div>
-            <div class="hero-flex__image">
-                <img src="assets/images/880.png" alt="Illustration of devices">
+            <div class="hero-flex__image-square">
+                <div class="image-square image-square-large">
+                    <img class="overlay-img" src="assets/svgs/Under-construction.svg" alt="Under Construction">
+                </div>
             </div>
         </div>
     </div>
     <!-- <button id="clickMe">Click me</button>
     <p id="output"></p> -->
     <script src="script.js"></script>
+    <div style="position: fixed; left: 0; bottom: 0; width: 100%; z-index: 0; pointer-events: none; overflow: hidden;">
+        <img src="assets/svgs/wave.svg" alt="Wave SVG" style="width: 100%; height: 100%; display: block;">
+    </div>
 </body>
 
 </html>
 
 <style>
+    @font-face {
+        font-family: "Atelia";
+        src: url('assets/fonts/Atelia.ttf') format('truetype');
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: "Nautica";
+        src: url('assets/fonts/Nautica.ttf') format('truetype');
+    }
+
     body {
         margin: 0 !important;
         padding: 0 !important;
-        font-family: Helvetica, sans-serif;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        /* font-weight: <weight>; */
+        font-style: normal;
         text-align: center;
-        color: #064089;
+        color: #1C8757;
         position: relative;
         min-height: 100vh;
+    }
+
+    .big-title {
+        font-family: "Atelia", sans-serif;
+        font-weight: 400;
+        font-size: 2.5rem;
+        letter-spacing: 0.03em;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .background-video {
@@ -90,8 +130,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 0 20px;
-        padding: 10px 20px;
-
+        padding: 20px 20px;
         height: 44px;
         min-height: 44px;
         /* background-color: red; */
@@ -100,21 +139,24 @@
     .logo-and-title {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         padding-bottom: 0px;
         margin-bottom: 0px;
+        padding-left: 25px;
     }
 
     .logo-and-title img {
         width: 44px;
         height: 44px;
         margin-right: 8px;
+        align-items: center;
     }
 
     .title-block {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: center;
+        margin-bottom: 30px
     }
 
     .title-block h1 {
@@ -123,9 +165,10 @@
     }
 
     .sub-title {
+        font-family: "Achiko", sans-serif;
         font-size: 12px;
         margin-left: 5px;
-        margin-top: 2px;
+        margin-top: -4px;
     }
 
     .fade-out {
@@ -168,6 +211,7 @@
         display: flex;
         align-items: stretch;
         height: 40px;
+        gap: 25px;
     }
 
     .nav li {
@@ -192,20 +236,21 @@
         align-items: center;
         gap: 8px;
         text-decoration: none;
-        font-size: 0.88rem;
+        font-size: .9rem;
         font-weight: 500;
-        letter-spacing: 0.01em;
+
         padding: 0 2px;
         height: 100%;
-        font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Helvetica, Arial, sans-serif;
-        color: #064089;
+        color: #1C8757;
         transition: color 0.2s;
+        font-family: "Rubik", sans-serif;
     }
 
     .nav a.nav-active,
     .nav a:focus {
-        color: #022d5c !important;
+
         background: none;
+        border-bottom: #06562d 2px solid;
         font-weight: 700;
         text-decoration: none;
         margin-bottom: 0;
@@ -213,7 +258,7 @@
     }
 
     .nav a:active {
-        color: #022d5c;
+        color: #1C8757;
     }
 
     .nav-icon {
@@ -345,6 +390,7 @@
         min-height: calc(100vh - 100px);
         width: 100vw;
         box-sizing: border-box;
+
     }
 
     .hero-flex {
@@ -357,12 +403,14 @@
         margin: 0 auto;
         width: 100%;
         box-sizing: border-box;
+
     }
 
     .hero-flex__text {
         flex: 1 1 32ch;
         text-align: left;
         max-width: 340px;
+
     }
 
     .hero-flex__text h1 {
@@ -381,36 +429,79 @@
         display: inline-block;
         padding: .9rem 2.5rem;
         font-weight: 600;
-        border: 2px solid #064089;
+        border: 2px solid #1C8757;
         border-radius: 9999px;
         text-decoration: none;
         transition: background .2s ease;
-        color: #064089;
+        color: #1C8757;
         background: none;
     }
 
     .btn:hover {
-        background: #064089;
+        background: #076534;
         color: #fff;
     }
 
-    .hero-flex__image {
+    .hero-flex__image-square {
         flex: 1 1 40%;
         text-align: right;
-
-        min-width: 70%;
-        min-height: 520px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        box-sizing: border-box;
     }
 
-    .hero-flex__image img {
+    .image-square {
+        width: 420px;
+        height: 260px;
+        background-color: #23671c;
+        background-image: linear-gradient(rgba(35, 103, 28, 0.82), rgba(35, 103, 28, 0.82)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%230aa108' fill-opacity='0.48'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 18px rgba(6, 64, 137, 0.10);
+        overflow: hidden;
+    }
+
+    .image-square.image-square-large {
+        width: 700px;
+        height: 450px;
+        position: relative;
+        background-color: #23671c;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%230aa108' fill-opacity='0.48'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        border-radius: 48px;
+        box-shadow: 0 4px 32px rgba(6, 64, 137, 0.18);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pattern-img {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: 1;
+        opacity: 0.45;
+    }
+
+    .overlay-img {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+        z-index: 2;
+        border-radius: 32px;
+        box-shadow: 0 2px 18px rgba(6, 64, 137, 0.10);
+    }
+
+    .image-square img {
         display: block;
-        border-radius: 14px;
-        box-shadow: 0 2px 12px rgba(6, 64, 137, 0.08);
     }
 
     @media (max-width: 768px) {
@@ -432,14 +523,46 @@
             max-width: 220px;
             margin: 0 auto;
         }
+
+        .image-square {
+            width: 90vw;
+            height: 90vw;
+            max-width: 340px;
+            max-height: 340px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .image-square.image-square-large {
+            width: 90vw;
+            height: 90vw;
+            max-width: 420px;
+            max-height: 420px;
+            border-radius: 18px;
+        }
+
+        .overlay-img {
+            top: 12%;
+            left: 12%;
+            width: 76%;
+            height: 76%;
+        }
+    }
+
+    .image-square,
+    .image-square.image-square-large {
+        z-index: 1;
     }
 </style>
 
 <script>
-    document.querySelectorAll('.nav a').forEach(link => {
-        link.addEventListener('click', function (e) {
-            document.querySelectorAll('.nav a').forEach(l => l.classList.remove('nav-active'))
-            this.classList.add('nav-active')
-        })
+    document.addEventListener('DOMContentLoaded', function () {
+        const overlayImg = document.querySelector('.image-square.image-square-large .overlay-img')
+        if (overlayImg) {
+            overlayImg.classList.add('magictime', 'swashIn')
+            setTimeout(() => {
+                overlayImg.classList.remove('magictime', 'swashIn')
+            }, 1000)
+        }
     });
 </script>
